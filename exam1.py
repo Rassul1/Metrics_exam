@@ -1,9 +1,9 @@
 import unittest
 import math
 
-more = "More zero"
-inv = "Invalid"
-less = "Less zero"
+MORE = "More zero"
+INV = "Invalid"
+LESS = "Less zero"
 
 def results(x):
     print("Input:",x)
@@ -11,24 +11,24 @@ def results(x):
     if type(x) == float:
         num = math.gamma(x)
         if num> 0:
-            result = more
+            result = MORE
         else:
-            result = less
+            result = LESS
     else:
-        result = inv
+        result = INV
     print(result,"\n")
     return result
 
 
 class TestDevisionResults(unittest.TestCase):
     def test_MoreThatZero(self):
-        self.assertEqual(results(8), more)
+        self.assertEqual(results(8), MORE)
 
     def test_LessThatZero(self):
-        self.assertEqual(results(-0.1), less)
+        self.assertEqual(results(-0.1), LESS)
 
-    def test_Invalid(self):
-        self.assertEqual(results("d"), inv)
+    def test_invalid(self):
+        self.assertEqual(results("d"), INV)
 
 if __name__ == 'main':
     unittest.main()

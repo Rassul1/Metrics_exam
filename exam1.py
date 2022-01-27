@@ -5,11 +5,11 @@ MORE = "More zero"
 INV = "Invalid"
 LESS = "Less zero"
 
-def results(x):
-    print("Input:",x)
+def results(X):
+    print("Input:",X)
     result = ""
-    if type(x) == float:
-        num = math.gamma(x)
+    if type(X) == float():
+        num = math.gamma(X)
         if num> 0:
             result = MORE
         else:
@@ -21,10 +21,10 @@ def results(x):
 
 
 class TestDevisionResults(unittest.TestCase):
-    def test_MoreThatZero(self):
+    def test_morethatzero(self):
         self.assertEqual(results(8), MORE)
 
-    def test_LessThatZero(self):
+    def test_lessthatzero(self):
         self.assertEqual(results(-0.1), LESS)
 
     def test_invalid(self):
